@@ -23,7 +23,7 @@ Answer the following questions in the provided markdown file before turning in t
   Math.random()
 
 - How do you delete an element from an array?
-  delete operator
+  pop(), shift(), splice()
 
 - How do you append an element to an array?
   push()
