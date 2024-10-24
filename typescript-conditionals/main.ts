@@ -95,9 +95,9 @@ console.log(
 function categorizeAcidity(pH: number): string {
   if (pH === 7) {
     return 'neutral';
-  } else if (pH > 0 && pH < 7) {
+  } else if (pH >= 0 && pH < 7) {
     return 'acid';
-  } else if (pH < 14 && pH > 7) {
+  } else if (pH <= 14 && pH > 7) {
     return 'base';
   } else {
     return 'invalid pH level';
