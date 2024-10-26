@@ -2,10 +2,10 @@
 /* exported pick */
 function pick(source, keys) {
   const pickedObj = {};
-  for (const key of keys) {
-    for (const sKey in source) {
+  for (const sKey in source) {
+    for (const key of keys) {
       if (key === sKey && source[sKey] !== undefined) {
-        pickedObj[key] = source[sKey];
+        pickedObj[sKey] = source[sKey];
       }
     }
   }
