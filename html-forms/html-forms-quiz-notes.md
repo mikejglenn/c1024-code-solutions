@@ -8,10 +8,10 @@ Answer the following questions in the provided markdown file before turning in t
   HTML forms are pivotal for interacting with users, allowing for data collection, user authentication, feedback submission, and more. They are the bridge between the user and the server, facilitating the web's interactive nature.
 
 - Give five examples of form control elements.
-  button, checkbox, radio, reset, submit
+  button, input checkbox, input radio, reset, submit
 
 - Give three examples of `type` attribute values for HTML `<input>` elements.
-  button, checkbox, radio
+  checkbox, radio, text
 
 - Is an HTML `<input>` element a block element or an inline element?
   They are inline-block.
