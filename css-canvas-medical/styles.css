@@ -1,0 +1,42 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+}
+
+.top-nav {
+  margin-top: 1rem;
+}
+
+.hero {
+  background-image: url('images/hero.jpg');
+}
+
+.column-55 {
+  flex-basis: 55%;
+}
+
+.prefer {
+  justify-content: center;
+}
+
+.prefer,
+.locations {
+  text-align: center;
+}
+
+.locations {
+  background-color: #fafafa;
+  justify-content: space-between;
+}
+
+.bottom-nav {
+  background-color: #525351;
+  color: #fff;
+}
