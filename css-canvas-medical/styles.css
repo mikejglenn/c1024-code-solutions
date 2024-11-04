@@ -98,10 +98,11 @@ a {
 .prefer,
 .locations {
   text-align: center;
+  background-color: #fafafa;
+  color: #6e6e6e;
 }
 
 .prefer {
-  background-color: #fafafa;
   justify-content: center;
   margin-top: 4rem;
 }
@@ -111,12 +112,20 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
-  color: #6e6e6e;
+}
+
+.prefer p {
+  line-height: 1.5;
+  margin-bottom: 4rem;
 }
 
 .locations {
-  background-color: #fafafa;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-bottom: 4rem;
+}
+
+.locations div div {
+  padding: 1rem;
 }
 
 .bottom-nav {
