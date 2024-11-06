@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 10rem auto 0;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: Courier, monospace;
+}
+
+.column-full {
+  width: 100%;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre;
+}
+
+span {
+  border-bottom: 3px solid white;
+}
+
+span.current {
+  border-bottom-color: black;
+}
+
+span.correct {
+  color: green;
+}
+
+span.wrong {
+  color: red;
+  border-bottom-color: red;
+}
