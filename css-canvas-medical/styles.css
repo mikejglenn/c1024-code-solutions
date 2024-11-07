@@ -1,0 +1,178 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #6e6e6e;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-thirds {
+  flex-basis: calc(100% / 3 * 2);
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-nav {
+  margin-top: 2rem;
+  color: #a1a1a1;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.top-nav img {
+  width: 50%;
+}
+
+.top-nav .menu {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.top-nav a {
+  color: #a1a1a1;
+  padding: 0.7rem 1rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('images/hero.jpg');
+  background-size: cover;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+.hero .banner-content {
+  padding: 1.5rem 4rem 3rem 3.5rem;
+}
+
+.hero h2 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  line-height: 1.5;
+}
+
+.get-started {
+  background-color: #294464;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.bottom-info a {
+  color: #fff;
+}
+
+.foot a {
+  padding-right: 2rem;
+  color: #6e6e6e;
+}
+
+.top-nav span:last-child a {
+  background-color: #294464;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.prefer,
+.locations {
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.prefer {
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.prefer h3 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.prefer p {
+  line-height: 1.5;
+  margin-bottom: 4rem;
+}
+
+.locations {
+  justify-content: space-around;
+  padding-bottom: 4rem;
+}
+
+.locations div div {
+  padding: 1rem;
+}
+
+.call-to-action {
+  justify-content: space-between;
+  padding: 1rem 5rem;
+}
+
+.call-to-action h3 {
+  font-family: 'Tiempos Headline', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bottom-info {
+  background-color: #525351;
+  color: #fff;
+  padding: 4rem 7rem 4rem 5rem;
+  justify-content: space-between;
+}
+
+.bottom-info img {
+  width: 30%;
+}
+
+.bottom-info p {
+  line-height: 1.5;
+}
+
+.bottom-info div div {
+  padding-bottom: 0.5rem;
+}
+
+.bottom-info div div:first-child {
+  text-transform: uppercase;
+}
+
+.foot {
+  padding: 3rem 5rem;
+}
