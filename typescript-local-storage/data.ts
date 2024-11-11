@@ -1,4 +1,4 @@
-/* exported todos */
+/* exported todos, writeTodos */
 interface Todo {
   todoId: string;
   task: string;
