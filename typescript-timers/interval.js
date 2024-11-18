@@ -6,8 +6,7 @@ const intervalId = setInterval(() => {
   count--;
   if (count > 0) {
     $countdownDisplay.textContent = `${count}`;
-  }
-  if (count < 1) {
+  } else {
     clearInterval(intervalId);
     $countdownDisplay.textContent = `~Earth Beeeelooowww Us~`;
   }
