@@ -21,11 +21,14 @@ function setImgAndDot(): void {
   $imgShown?.setAttribute('src', `images/${imgArr[imgIndex]}.png`);
   if ($progressDots) {
     for (let i = 0; i < $progressDots.children.length; i++) {
-      $progressDots.children[i].classList.remove('fa-solid');
-      $progressDots.children[i].classList.add('fa-regular');
+      if (imgIndex === i) {
+        $progressDots.children[i].classList.remove('fa-regular');
+        $progressDots.children[i].classList.add('fa-solid');
+      } else {
+        $progressDots.children[i].classList.remove('fa-solid');
+        $progressDots.children[i].classList.add('fa-regular');
+      }
     }
-    $progressDots.children[imgIndex].classList.remove('fa-regular');
-    $progressDots.children[imgIndex].classList.add('fa-solid');
   }
 }
 
