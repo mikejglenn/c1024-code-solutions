@@ -21,6 +21,10 @@ body {
   margin: 0 8rem;
 }
 
+i {
+  cursor: pointer;
+}
+
 .carousel i {
   font-size: 3rem;
 }
