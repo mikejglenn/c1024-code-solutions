@@ -23,8 +23,8 @@ const v5: Customer = {
   },
 };
 
-console.log(v1 && 'v1 is truthy');
-console.log(v2 && 'v2 is truthy');
+v1 && console.log('v1 is truthy');
+v2 && console.log('v2 is truthy');
 
 const config1 = v1 || 'default-value';
 const config2 = v2 || 'default-value';
