@@ -15,7 +15,6 @@ const description = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
       autem? Iusto hic impedit aspernatur labore quos nesciunt? Ad dolore
       pariatur aperiam nemo, maiores laboriosam quam quod nisi ipsum, dicta sunt
       laborum similique repellat?`;
-const button = 'Click For Next Image';
 
 export default function App() {
   return (
@@ -24,7 +23,7 @@ export default function App() {
       <Image src={src} />
       <Caption caption={caption} />
       <Description description={description} />
-      <Button text={button} />
+      <Button text="Click For Next Image" />
     </>
   );
 }
