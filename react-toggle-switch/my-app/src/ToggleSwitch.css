@@ -1,0 +1,29 @@
+.switch-wrapper {
+  display: flex;
+}
+
+.switch {
+  background-color: #e2e2e2;
+  width: 3rem;
+  height: 1.5rem;
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.switch.switch-on {
+  justify-content: right;
+  background-color: #6aa84f;
+}
+
+.slider {
+  background-color: #fff;
+  width: 1rem;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 10px;
+}
+
+.switch-label {
+  width: 3rem;
+}
