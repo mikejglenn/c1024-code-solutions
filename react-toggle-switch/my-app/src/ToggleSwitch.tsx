@@ -2,15 +2,13 @@ import './ToggleSwitch.css';
 import { useState } from 'react';
 
 export function ToggleSwitch() {
-  const [tSwitch, setTSwitch] = useState(false);
+  const [isSwitchOn, setIsSwitchOn] = useState(false);
   return (
-    <>
-      <div onClick={() => setTSwitch(!tSwitch)} className="switch-wrapper">
-        <div className={tSwitch ? 'switch switch-on' : 'switch'}>
-          <div className="slider"></div>
-        </div>
-        <span className="switch-label">{tSwitch ? 'ON' : 'OFF'}</span>
+    <div onClick={() => setIsSwitchOn(!isSwitchOn)} className="switch-wrapper">
+      <div className={`switch ${isSwitchOn ? 'switch-on' : ''}`}>
+        <div className="slider"></div>
       </div>
-    </>
+      <span className="switch-label">{isSwitchOn ? 'ON' : 'OFF'}</span>
+    </div>
   );
 }
