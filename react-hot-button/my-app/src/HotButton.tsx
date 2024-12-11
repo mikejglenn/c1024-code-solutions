@@ -1,14 +1,16 @@
 type Props = {
-  label: string;
   onHotButtonClick: () => void;
+  classBgColor: string;
   clicks: number;
 };
 
-export function HotButton({ label, onHotButtonClick, clicks }: Props) {
+export function HotButton({ onHotButtonClick, classBgColor, clicks }: Props) {
   return (
     <>
-      <button onClick={onHotButtonClick}>{label}</button>
-      <span>{clicks} Clicks</span>
+      <button onClick={onHotButtonClick} className={classBgColor}>
+        Hot Button
+      </button>
+      <div>{clicks} Clicks</div>
     </>
   );
 }

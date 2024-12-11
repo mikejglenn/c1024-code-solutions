@@ -43,3 +43,30 @@
 .read-the-docs {
   color: #888;
 }
+
+.hot-button0-coldest {
+  background-color: #351c75;
+}
+
+.hot-button1-colder {
+  background-color: #674ea7;
+}
+
+.hot-button2-cold {
+  background-color: #e06666;
+}
+
+.hot-button3-hot {
+  background-color: #f6b26b;
+  color: #000;
+}
+
+.hot-button4-hotter {
+  background-color: #ff0;
+  color: #000;
+}
+
+.hot-button5-hottest {
+  background-color: #fff;
+  color: #000;
+}
