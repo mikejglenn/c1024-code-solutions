@@ -5,7 +5,8 @@ export function ValidatedInput() {
   const [passwordInput, setPasswordInput] = useState('');
 
   let errorMessage = '';
-  let passwordIcon = <FaTimes style={{ color: '#cf2a28' }} />;
+  let PasswordIcon = FaTimes;
+  let iconColor = '#cf2a28';
 
   if (passwordInput === '') {
     errorMessage = 'A password is required.';
@@ -18,8 +19,8 @@ export function ValidatedInput() {
   } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(passwordInput)) {
     errorMessage = 'Your password requires a special character.';
   } else {
-    errorMessage = '';
-    passwordIcon = <FaCheck style={{ color: '#6ba84f' }} />;
+    PasswordIcon = FaCheck;
+    iconColor = '#6ba84f';
   }
 
   return (
@@ -35,10 +36,10 @@ export function ValidatedInput() {
           required
         />
         <div style={{ fontSize: '1.3rem', paddingLeft: '0.8rem' }}>
-          {passwordIcon}
+          <PasswordIcon color={iconColor} />
         </div>
       </div>
-      <div style={{ color: '#cf2a28' }}>{errorMessage}</div>
+      <div style={{ color: '#cf2a28' }}>{errorMessage}&nbsp;</div>
     </label>
   );
 }
