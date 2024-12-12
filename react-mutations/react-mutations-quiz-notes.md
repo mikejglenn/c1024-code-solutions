@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
   `Object.assign() method and ...obj spread operator.`
 
 - What is a good way to immutably add a value to an array?
-  `Arrary.concat() and ...arr spread operator.`
+  `Array.concat() and ...arr spread operator.`
 
 - What is a good way to immutably update a value in an array?
   `.map() method and match the id of the item to update its value.`
