@@ -1,15 +1,15 @@
-type Pokemon = {
-  number: string;
-  name: string;
-};
+import { Pokemon } from './App';
 
 type Props = {
   pokedex: Pokemon[];
 };
 
 export function PokemonList({ pokedex }: Props) {
-  const listPokemon = pokedex.map((pokemon) => (
-    <li key={pokemon.number}>{pokemon.name}</li>
-  ));
-  return <ul>{listPokemon}</ul>;
+  return (
+    <ul>
+      {pokedex.map((pokemon) => (
+        <li key={pokemon.number}>{pokemon.name}</li>
+      ))}
+    </ul>
+  );
 }

@@ -1,7 +1,12 @@
 import './App.css';
 import { PokemonList } from './PokemonList';
 
-const pokedex = [
+export type Pokemon = {
+  number: string;
+  name: string;
+};
+
+const pokedex: Pokemon[] = [
   { number: '001', name: 'Bulbasaur' },
   { number: '004', name: 'Charmander' },
   { number: '007', name: 'Squirtle' },
