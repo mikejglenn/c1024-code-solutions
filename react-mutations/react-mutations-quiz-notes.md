@@ -8,12 +8,16 @@ Answer the following questions in the provided markdown file before turning in t
   `When the state variable is changed with a different value.`
 
 - What are some ways to create a new, modified copy of an object?
+  `Object.assign() method and ...obj spread operator.`
 
 - What is a good way to immutably add a value to an array?
+  `Arrary.concat() and ...arr spread operator.`
 
 - What is a good way to immutably update a value in an array?
+  `.map() method and match the id of the item to update its value.`
 
 - What is a good way to immutably remove a value from an array?
+  `.filter() method and keep all matches where id does not equal the item passed in.`
 
 ## Notes
 
