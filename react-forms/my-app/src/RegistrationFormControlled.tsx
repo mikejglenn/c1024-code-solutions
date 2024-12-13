@@ -17,7 +17,11 @@ export function RegistrationFormControlled() {
       </label>
       <label>
         Password:
-        <input name="password" onChange={(e) => setPassword(e.target.value)} />
+        <input
+          type="password"
+          name="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </label>
       <button>Submit</button>
     </form>

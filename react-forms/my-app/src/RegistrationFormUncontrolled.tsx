@@ -10,7 +10,7 @@ export function RegistrationFormUncontrolled() {
     event.preventDefault();
     const currentTarget = event.target as HTMLFormElement;
     const formElements = currentTarget.elements as unknown as FormElements;
-    console.log('Uncontrolled form: username, password', {
+    console.log('Uncontrolled form: username, password:', {
       username: formElements.username.value,
       password: formElements.password.value,
     });
@@ -24,7 +24,7 @@ export function RegistrationFormUncontrolled() {
       </label>
       <label>
         Password:
-        <input name="password" />
+        <input type="password" name="password" />
       </label>
       <button>Submit</button>
     </form>
