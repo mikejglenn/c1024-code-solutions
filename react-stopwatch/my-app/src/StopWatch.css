@@ -1,0 +1,19 @@
+.stopwatch-face {
+  height: 10rem;
+  width: 10rem;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stopwatch-seconds {
+  cursor: pointer;
+}
+
+.stopwatch-icon {
+  font-size: 1.5rem;
+}
