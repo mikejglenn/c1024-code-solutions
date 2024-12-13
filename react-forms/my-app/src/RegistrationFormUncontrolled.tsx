@@ -1,19 +1,11 @@
 import { FormEvent } from 'react';
 
-type FormElements = {
-  username: HTMLInputElement;
-  password: HTMLInputElement;
-};
-
 export function RegistrationFormUncontrolled() {
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const currentTarget = event.target as HTMLFormElement;
-    const formElements = currentTarget.elements as unknown as FormElements;
-    console.log('Uncontrolled form: username, password:', {
-      username: formElements.username.value,
-      password: formElements.password.value,
-    });
+    const form = new FormData(event.currentTarget);
+    const data = Object.fromEntries(form);
+    console.log('Uncontrolled form: username, password:', data);
   }
 
   return (
