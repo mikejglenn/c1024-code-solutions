@@ -2,37 +2,38 @@ import './StopWatch.css';
 import { useState } from 'react';
 import { FaPause, FaPlay } from 'react-icons/fa';
 
-let StopWatchIcon = FaPlay;
-
 export function StopWatch() {
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout>();
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
+  const StopWatchIcon = intervalId ? FaPause : FaPlay;
+
+  function handleIconClick() {
+    if (!intervalId) {
+      setIntervalId(
+        setInterval(
+          () => setElapsedSeconds((elapsedSeconds) => elapsedSeconds + 1),
+          1000
+        )
+      );
+    } else {
+      clearInterval(intervalId);
+      setIntervalId(undefined);
+    }
+  }
+
   return (
     <>
       <div className="stopwatch-face">
-        <div className="stopwatch-seconds" onClick={() => setElapsedSeconds(0)}>
+        <div
+          className="stopwatch-seconds"
+          onClick={() => {
+            if (!intervalId) setElapsedSeconds(0);
+          }}>
           {elapsedSeconds}
         </div>
       </div>
-      <StopWatchIcon
-        className="stopwatch-icon"
-        onClick={() => {
-          if (intervalId === undefined) {
-            StopWatchIcon = FaPause;
-            setIntervalId(
-              setInterval(
-                () => setElapsedSeconds((elapsedSeconds) => elapsedSeconds + 1),
-                1000
-              )
-            );
-          } else {
-            StopWatchIcon = FaPlay;
-            clearInterval(intervalId);
-            setIntervalId(undefined);
-          }
-        }}
-      />
+      <StopWatchIcon className="stopwatch-icon" onClick={handleIconClick} />
     </>
   );
 }
