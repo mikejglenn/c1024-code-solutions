@@ -6,9 +6,9 @@ export function StopWatch() {
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout>();
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
-  const StopWatchIcon = intervalId ? FaPause : FaPlay;
+  const StopWatchIcon = !intervalId ? FaPlay : FaPause;
 
-  function handleIconClick() {
+  function handleIconClick(): void {
     if (!intervalId) {
       setIntervalId(
         setInterval(
