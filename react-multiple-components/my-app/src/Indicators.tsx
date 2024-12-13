@@ -1,13 +1,17 @@
 type Props = {
   itemsCount: number;
   index: number;
+  onIndicatorClick: (indicatorIndex: number) => void;
 };
 
-export function Indicators({ itemsCount, index }: Props) {
+export function Indicators({ itemsCount, index, onIndicatorClick }: Props) {
   const indicators = [];
   for (let i = 0; i < itemsCount; i++) {
     indicators.push(
-      <button style={{ backgroundColor: i === index ? 'blue' : 'black' }}>
+      <button
+        key={i}
+        onClick={() => onIndicatorClick(i)}
+        style={{ backgroundColor: i === index ? 'blue' : 'black' }}>
         {i}
       </button>
     );
