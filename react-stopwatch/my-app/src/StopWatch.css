@@ -1,4 +1,4 @@
-.stopwatch-wrapper {
+.stopwatch-face {
   height: 10rem;
   width: 10rem;
   border: 5px solid #fff;
@@ -8,6 +8,10 @@
   align-items: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.stopwatch-seconds {
+  cursor: pointer;
 }
 
 .stopwatch-icon {
