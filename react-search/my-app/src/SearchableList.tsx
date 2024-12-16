@@ -13,7 +13,7 @@ export function SearchableList({ quotes }: Props) {
       <SearchBar value={searchInput} onSearchChange={setSearchInput} />
       <Items
         filteredItems={quotes.filter((quote) =>
-          quote.toLowerCase().includes(searchInput.toLowerCase())
+          quote.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
         )}
       />
     </div>
