@@ -1,4 +1,3 @@
-import './App.css';
 import { SearchableList } from './SearchableList';
 
 const quotes = [
