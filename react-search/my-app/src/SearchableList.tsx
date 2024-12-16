@@ -10,7 +10,7 @@ export function SearchableList({ quotes }: Props) {
   const [searchInput, setSearchInput] = useState('');
   return (
     <div style={{ height: '25rem' }}>
-      <SearchBar onSearchChange={setSearchInput} />
+      <SearchBar value={searchInput} onSearchChange={setSearchInput} />
       <Items
         filteredItems={quotes.filter((quote) =>
           quote.toLowerCase().includes(searchInput.toLowerCase())

@@ -1,8 +1,9 @@
 type Props = {
+  value: string;
   onSearchChange: (searchInput: string) => void;
 };
 
-export function SearchBar({ onSearchChange }: Props) {
+export function SearchBar({ value, onSearchChange }: Props) {
   return (
     <div
       style={{
@@ -16,6 +17,7 @@ export function SearchBar({ onSearchChange }: Props) {
           background: 'transparent',
           paddingLeft: '1.1rem',
         }}
+        value={value}
         onChange={(e) => onSearchChange(e.target.value)}
       />
     </div>
