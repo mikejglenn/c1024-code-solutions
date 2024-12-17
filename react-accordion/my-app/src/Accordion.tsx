@@ -7,15 +7,15 @@ type Props = {
 };
 
 export function Accordion({ topics }: Props) {
-  const [isOpen, setIsOpen] = useState(0);
+  const [openId, setOpenId] = useState<number>();
 
   return topics.map((topic) => (
     <TopicGroup
       key={topic.id}
       topic={topic}
-      value={isOpen}
-      onTitleClick={(topicOpen) =>
-        setIsOpen(topicOpen === isOpen ? 0 : topicOpen)
+      isOpen={openId === topic.id}
+      onTitleClick={() =>
+        openId === topic.id ? setOpenId(undefined) : setOpenId(topic.id)
       }
     />
   ));

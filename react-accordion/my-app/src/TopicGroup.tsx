@@ -8,21 +8,17 @@ export type Topic = {
 
 type Props = {
   topic: Topic;
-  value: number;
-  onTitleClick: (topicId: number) => void;
+  isOpen: boolean;
+  onTitleClick: () => void;
 };
 
-export function TopicGroup({ topic, value, onTitleClick }: Props) {
+export function TopicGroup({ topic, isOpen, onTitleClick }: Props) {
   return (
     <div style={{ width: '300px' }}>
-      <div className="title" onClick={() => onTitleClick(topic.id)}>
+      <div className="title" onClick={onTitleClick}>
         {topic.title}
       </div>
-      <div
-        className="content"
-        style={{ display: topic.id === value ? 'block' : 'none' }}>
-        {topic.content}
-      </div>
+      {isOpen && <div className="content">{topic.content}</div>}
     </div>
   );
 }
