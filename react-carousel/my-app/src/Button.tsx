@@ -1,11 +1,11 @@
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 type Props = {
   direction: string;
-  onButtonClick: () => void;
+  onClick: () => void;
 };
 
-export function Button({ direction, onButtonClick }: Props) {
-  const ButtonIcon = direction === 'prev' ? FaAngleLeft : FaAngleRight;
-  return <ButtonIcon onClick={onButtonClick} style={{ fontSize: '3rem' }} />;
+export function Button({ direction, onClick }: Props) {
+  const ButtonIcon = direction === 'prev' ? FaChevronLeft : FaChevronRight;
+  return <ButtonIcon onClick={onClick} style={{ fontSize: '2rem' }} />;
 }

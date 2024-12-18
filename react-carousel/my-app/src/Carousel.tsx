@@ -29,20 +29,18 @@ export function Carousel({ images }: Props) {
         }}>
         <Button
           direction="prev"
-          onButtonClick={() =>
-            setIndex((index - 1 + images.length) % images.length)
-          }
+          onClick={() => setIndex((index - 1 + images.length) % images.length)}
         />
         <ImageBoard image={images[index]} />
         <Button
           direction="next"
-          onButtonClick={() => setIndex((index + 1) % images.length)}
+          onClick={() => setIndex((index + 1) % images.length)}
         />
       </div>
       <Dots
         count={images.length}
         current={index}
-        onDotClick={(i) => setIndex(i)}
+        onSelect={(i) => setIndex(i)}
       />
     </>
   );
