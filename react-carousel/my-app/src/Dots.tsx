@@ -11,9 +11,17 @@ export function Dots({ count, current, onDotClick }: Props) {
   for (let i = 0; i < count; i++) {
     dots.push(
       i === current ? (
-        <FaCircle key={i} onClick={() => onDotClick(i)} />
+        <FaCircle
+          key={i}
+          onClick={() => onDotClick(i)}
+          style={{ padding: '0 5px' }}
+        />
       ) : (
-        <FaRegCircle key={i} onClick={() => onDotClick(i)} />
+        <FaRegCircle
+          key={i}
+          onClick={() => onDotClick(i)}
+          style={{ padding: '0 5px' }}
+        />
       )
     );
   }

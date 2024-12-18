@@ -1,9 +1,8 @@
 import type { Image } from './App';
-import { PrevButton } from './PrevButton';
+import { Button } from './Button';
 import { ImageBoard } from './ImageBoard';
-import { NextButton } from './NextButton';
 import { Dots } from './Dots';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type Props = {
   images: Image[];
@@ -12,20 +11,48 @@ type Props = {
 export function Carousel({ images }: Props) {
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setIndex((index + 1) % images.length);
+    }, 3000);
+    return () => clearTimeout(timerId);
+  }, [index, images.length]);
+
   return (
-    <>
-      <PrevButton
-        onPrevClick={() =>
-          setIndex((index - 1 + images.length) % images.length)
-        }
-      />
-      <ImageBoard image={images[index]} />
-      <NextButton onNextClick={() => setIndex((index + 1) % images.length)} />
-      <Dots
-        count={images.length}
-        current={index}
-        onDotClick={(i) => setIndex(i)}
-      />
-    </>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        height: '400px',
+      }}>
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Button
+          direction="prev"
+          onButtonClick={() =>
+            setIndex((index - 1 + images.length) % images.length)
+          }
+        />
+        <div style={{ display: 'flex', height: '300px', padding: '0 4rem' }}>
+          <ImageBoard image={images[index]} />
+        </div>
+        <Button
+          direction="next"
+          onButtonClick={() => setIndex((index + 1) % images.length)}
+        />
+      </div>
+      <div style={{ width: '100%' }}>
+        <Dots
+          count={images.length}
+          current={index}
+          onDotClick={(i) => setIndex(i)}
+        />
+      </div>
+    </div>
   );
 }

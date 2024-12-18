@@ -5,5 +5,11 @@ type Props = {
 };
 
 export function ImageBoard({ image }: Props) {
-  return <img src={image.src} alt={image.alt} style={{ height: '500px' }} />;
+  return (
+    <img
+      src={image.src}
+      alt={image.alt}
+      style={{ width: '200px', margin: '0 50px' }}
+    />
+  );
 }
