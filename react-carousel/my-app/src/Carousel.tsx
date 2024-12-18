@@ -19,15 +19,10 @@ export function Carousel({ images }: Props) {
   }, [index, images.length]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        height: '400px',
-      }}>
+    <>
       <div
         style={{
-          width: '100%',
+          height: '350px',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -38,21 +33,17 @@ export function Carousel({ images }: Props) {
             setIndex((index - 1 + images.length) % images.length)
           }
         />
-        <div style={{ display: 'flex', height: '300px', padding: '0 4rem' }}>
-          <ImageBoard image={images[index]} />
-        </div>
+        <ImageBoard image={images[index]} />
         <Button
           direction="next"
           onButtonClick={() => setIndex((index + 1) % images.length)}
         />
       </div>
-      <div style={{ width: '100%' }}>
-        <Dots
-          count={images.length}
-          current={index}
-          onDotClick={(i) => setIndex(i)}
-        />
-      </div>
-    </div>
+      <Dots
+        count={images.length}
+        current={index}
+        onDotClick={(i) => setIndex(i)}
+      />
+    </>
   );
 }
