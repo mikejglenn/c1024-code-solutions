@@ -24,9 +24,7 @@ export function AppDrawer({ menuItems, menuHeading }: Props) {
           {menuItems.map((menu) => (
             <li key={menu.name} className="inline-block py-2 px-2 w-full">
               <Link to={menu.path} className="text-white flex items-center">
-                <span>
-                  <img src={menu.iconUrl} className="w-4" />
-                </span>
+                <img src={menu.iconUrl} className="w-4" />
                 <span className="ml-1">{isOpen && menu.name}</span>
               </Link>
             </li>
