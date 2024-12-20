@@ -6,7 +6,7 @@ type Props = {
   positionTo?: HTMLElement | null;
   onClose: () => void;
   children: ReactNode;
-  opacity: string;
+  opacity?: string;
 };
 
 export function Popup({
