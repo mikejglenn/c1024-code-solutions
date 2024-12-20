@@ -6,9 +6,16 @@ type Props = {
   positionTo?: HTMLElement | null;
   onClose: () => void;
   children: ReactNode;
+  opacity: string;
 };
 
-export function Popup({ isOpen, positionTo, onClose, children }: Props) {
+export function Popup({
+  isOpen,
+  positionTo,
+  onClose,
+  children,
+  opacity,
+}: Props) {
   if (!isOpen) return null;
 
   const r = positionTo?.getBoundingClientRect();
@@ -24,7 +31,7 @@ export function Popup({ isOpen, positionTo, onClose, children }: Props) {
           width: '100vw',
           height: '100vh',
           background: '#000',
-          opacity: '0.5',
+          opacity,
         }}
         onClick={onClose}></div>
       <div style={{ position: 'absolute', top, left }}>{children}</div>

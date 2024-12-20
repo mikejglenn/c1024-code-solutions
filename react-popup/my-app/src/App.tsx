@@ -24,8 +24,8 @@ function App() {
       <Popup
         isOpen={isOpen}
         positionTo={buttonPopup.current}
-        onClose={() => setIsOpen(false)}>
-        {' '}
+        onClose={() => setIsOpen(false)}
+        opacity="0.5">
         <ul
           style={{
             background: '#777',
