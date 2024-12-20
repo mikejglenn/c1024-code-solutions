@@ -44,10 +44,10 @@ function Menu({ items, isOpen }: MenuProps) {
           <NavLink
             to={menu.path}
             // className="text-white flex items-center"
+            // className={`${({ isActive }) =>
+            //   isActive ? 'bg-black' : ''} text-white flex items-center`}
             className={({ isActive }) =>
-              isActive
-                ? 'text-white flex items-center bg-black'
-                : 'text-white flex items-center'
+              (isActive ? 'bg-black ' : '') + 'text-white flex items-center'
             }>
             <img src={menu.iconUrl} className="w-4" />
             <span className="ml-1">{isOpen && menu.name}</span>
