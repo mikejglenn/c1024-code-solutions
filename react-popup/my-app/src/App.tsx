@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-// import './App.css';
 import { Popup } from './Popup';
 
 function App() {
