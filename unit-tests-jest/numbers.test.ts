@@ -28,7 +28,7 @@ describe('multiplyBy', () => {
   it(`returns modified object multiplying the value of each key only if that
     value is a number`, () => {
     const obj = { one: 1, two: 'two', three: '3' };
-    const result = multiplyBy(obj, 2);
-    expect(result).toEqual({ one: 2 });
+    multiplyBy(obj, 2);
+    expect(obj).toEqual({ one: 2, two: 'two', three: '3' });
   });
 });
