@@ -12,5 +12,6 @@ export function queryIndex(index: DocumentIndex, query: string): Set<Document> {
     const docSet = index.get(lcWord);
     if (docSet) docSet.forEach((d) => docs.add(d));
   });
+
   return docs;
 }
