@@ -15,4 +15,8 @@ function smallestRecursive(node: TreeNode | undefined): number {
   } else {
     return smallestRecursive(node.left);
   }
+
+  // const left = smallestRecursive(node.left);
+  // const right = smallestRecursive(node.right);
+  // return Math.min(node?.value, left, right);
 }

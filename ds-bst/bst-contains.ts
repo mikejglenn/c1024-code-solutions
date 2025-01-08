@@ -17,4 +17,9 @@ function containsRecursive(node: TreeNode | undefined, value: number): boolean {
   } else {
     return containsRecursive(node.right, value);
   }
+
+  // if (node.value === value) return true;
+  // if (containsRecursive(node.left, value)) return true;
+  // if (containsRecursive(node.right, value)) return true;
+  // return false;
 }
