@@ -10,7 +10,7 @@ export function queryIndex(index: DocumentIndex, query: string): Set<Document> {
   query.match(/\b(\w+)\b/g)?.forEach((word) => {
     const lcWord = word.toLocaleLowerCase();
     const docSet = index.get(lcWord);
-    if (docSet) docSet.forEach((d) => docs.add(d));
+    docSet?.forEach((d) => docs.add(d));
   });
 
   return docs;

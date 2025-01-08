@@ -17,11 +17,9 @@ export function buildIndex(docs: Document[]): DocumentIndex {
     d.content.match(/\b(\w+)\b/g)?.forEach((word) => {
       const lcWord = word.toLocaleLowerCase();
       const docSet = index.get(lcWord);
-      if (docSet) {
-        index.set(lcWord, docSet.add(d));
-      } else {
-        index.set(lcWord, new Set([d]));
-      }
+      docSet
+        ? index.set(lcWord, docSet.add(d))
+        : index.set(lcWord, new Set([d]));
     })
   );
 
