@@ -5,7 +5,7 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What are the SQL _CRUD_ operations?
-  `create, read, update, and delete`
+  `insert, select, update, and delete`
 
 - How do you add a row to a SQL table?
   `insert into "table" ("columns"...) values ('tuples'...)`
