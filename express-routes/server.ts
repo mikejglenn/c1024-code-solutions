@@ -17,7 +17,7 @@ app.get('/notes', (req, res) => {
 
 app.post('/notes/:noteId', (req, res) => {
   const { noteId } = req.params;
-  res.send(`Hello notedID ${noteId}!`);
+  res.send(`Hello noteId ${noteId}!`);
 });
 
 app.listen(8080, () => {
