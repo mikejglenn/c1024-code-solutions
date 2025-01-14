@@ -37,43 +37,15 @@ app.get('/api/films/:filmId', async (req, res, next) => {
     if (!filmId) {
       throw new ClientError(400, 'filmId is required');
     }
+    if (!Number.isInteger(+filmId)) {
+      throw new ClientError(400, `filmId is not an integer`);
+    }
     const sql = `
       select *
       from "films"
       where "filmId" = $1;
     `;
     const params = [filmId];
-    const result = await db.query(sql, params);
-    const film = result.rows[0];
-    if (!film) {
-      throw new ClientError(404, `film ${filmId} not found`);
-    }
-    res.json(film);
-  } catch (err) {
-    next(err);
-  }
-});
-
-app.put('/api/films/:filmId', async (req, res, next) => {
-  try {
-    const { filmId } = req.params;
-    const { title } = req.query;
-    if (!filmId) {
-      throw new ClientError(400, 'filmId is required');
-    }
-    if (!Number.isInteger(+filmId)) {
-      throw new ClientError(400, `filmId is not an integer`);
-    }
-    if (!title) {
-      throw new ClientError(400, 'title is required');
-    }
-    const sql = `
-      update "films"
-      set "title" = $2
-      where "filmId" = $1
-      returning *;
-    `;
-    const params = [filmId, title];
     const result = await db.query(sql, params);
     const film = result.rows[0];
     if (!film) {
