@@ -37,12 +37,10 @@ app.get('/api/actors/:actorId', async (req, res, next) => {
 
 app.post('/api/actors', async (req, res, next) => {
   try {
-    const { firstName } = req.body;
+    const { firstName, lastName } = req.body;
     if (!firstName) {
       throw new ClientError(400, 'firstName is required');
     }
-
-    const { lastName } = req.body;
     if (!lastName) {
       throw new ClientError(400, 'lastName is required');
     }
@@ -68,12 +66,10 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
       throw new ClientError(400, `Non-integer actorId: ${actorId}`);
     }
 
-    const { firstName } = req.body;
+    const { firstName, lastName } = req.body;
     if (!firstName) {
       throw new ClientError(400, 'firstName is required');
     }
-
-    const { lastName } = req.body;
     if (!lastName) {
       throw new ClientError(400, 'lastName is required');
     }
@@ -91,7 +87,7 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     if (!actor) {
       throw new ClientError(404, `actor ${actorId} not found`);
     }
-    res.status(200).json(actor);
+    res.json(actor);
   } catch (err) {
     next(err);
   }
