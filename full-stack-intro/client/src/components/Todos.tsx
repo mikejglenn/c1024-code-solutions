@@ -49,7 +49,7 @@ export function Todos() {
       const data = (await response.json()) as Todo;
       setTodos([...todos, data]);
     } catch (err) {
-      alert('Error:' + err);
+      alert(`Error: ${err}`);
     }
   }
 
@@ -68,7 +68,7 @@ export function Todos() {
       const todosCopy = todos.map((t) => (t.todoId === todo.todoId ? data : t));
       setTodos(todosCopy);
     } catch (err) {
-      alert('Error:' + err);
+      alert(`Error: ${err}`);
     }
   }
 
