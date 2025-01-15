@@ -41,14 +41,15 @@ export function Todos() {
       const response = await fetch('/api/todos/', {
         method: 'post',
         body: JSON.stringify(newTodo),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       });
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       const data = (await response.json()) as Todo;
       setTodos([...todos, data]);
     } catch (err) {
-      setError(err);
+      alert('Error:' + err);
     }
   }
 
@@ -57,19 +58,17 @@ export function Todos() {
     try {
       const response = await fetch(`/api/todos/${todo.todoId}`, {
         method: 'put',
-        body: JSON.stringify({
-          task: todo.task,
-          isCompleted: todo.isCompleted ? false : true,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted }),
+        headers: { 'Content-Type': 'application/json' },
       });
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       const data = (await response.json()) as Todo;
       const todosCopy = todos.map((t) => (t.todoId === todo.todoId ? data : t));
       setTodos(todosCopy);
     } catch (err) {
-      setError(err);
+      alert('Error:' + err);
     }
   }
 
