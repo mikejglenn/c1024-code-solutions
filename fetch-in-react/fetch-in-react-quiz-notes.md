@@ -8,7 +8,7 @@ Answer the following questions in the provided markdown file before turning in t
   `fetch`
 
 - What two things need to be done to properly handle HTTP request errors? Why?
-  `async/await and error handling. might not get response. might get a response of an error.`
+  `async/await and error handling. might not get response. might get a response of an error. real answer: try/catch and .ok (200 range status codes)`
 
 - How can `useEffect` be used to load data for a component?
   `async function inside useEffect calls data for component`
