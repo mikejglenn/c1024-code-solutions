@@ -65,8 +65,7 @@ export function Todos() {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = (await response.json()) as Todo;
-      const todosCopy = todos.map((t) => (t.todoId === todo.todoId ? data : t));
-      setTodos(todosCopy);
+      setTodos(todos.map((t) => (t.todoId === todo.todoId ? data : t)));
     } catch (err) {
       alert(`Error: ${err}`);
     }
