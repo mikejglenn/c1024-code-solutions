@@ -38,6 +38,9 @@ app.get('/api/products', async (req, res, next) => {
 app.get('/api/products/:productId', async (req, res, next) => {
   try {
     const { productId } = req.params;
+    if (!Number.isInteger(+productId) || +productId < 1) {
+      throw new ClientError(400, 'todoId must be a positive integer');
+    }
     const sql = `
       select *
         from "products"
