@@ -47,7 +47,7 @@ export function ProductDetails() {
       <div className="p-6">
         <div className="flex flex-wrap">
           <div className="flex-grow flex-1 px-4">
-            <Link to="/" className="whitespace-no-wrap text-gray-600">
+            <Link to="/" className="whitespace-no-wrap text-white-600">
               &lt; Back to catalog
             </Link>
           </div>
@@ -62,7 +62,7 @@ export function ProductDetails() {
           </div>
           <div className="w-full sm:w-1/2 md:w-3/5 px-4 my-12">
             <h2 className="font-bold">{name}</h2>
-            <h5 className="my-2 text-gray-600">{toDollars(price)}</h5>
+            <h5 className="my-2 text-white-600">{toDollars(price)}</h5>
             <p>{shortDescription}</p>
           </div>
         </div>

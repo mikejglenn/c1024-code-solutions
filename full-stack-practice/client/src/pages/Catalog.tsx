@@ -56,11 +56,11 @@ function ProductCard({ product }: CardProps) {
   return (
     <Link
       to={`details/${productId}`}
-      className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4 shadow-sm hover:text-inherit">
+      className="block cursor-pointer text-white-900 rounded border border-gray-300 mb-4 shadow-sm hover:text-inherit">
       <img src={imageUrl} className="object-contain h-72 w-full" alt={name} />
       <div className="flex-auto p-6">
         <h5 className="font-bold mb-3">{name}</h5>
-        <p className="mb-0 text-gray-600">{toDollars(price)}</p>
+        <p className="mb-0 text-white-600">{toDollars(price)}</p>
         <p className="h-20 mb-0 overflow-hidden">{shortDescription}</p>
       </div>
     </Link>

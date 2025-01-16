@@ -5,7 +5,7 @@ export function NotFound() {
     <div className="flex">
       <div className="flex-1 py-12 text-center">
         <h3>Uh oh, we could not find the page you were looking for!</h3>
-        <Link to="/" className="text-gray-700">
+        <Link to="/" className="text-white-700">
           Return to the catalog
         </Link>
       </div>
