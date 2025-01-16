@@ -41,9 +41,9 @@ app.get('/api/products/:productId', async (req, res, next) => {
     const sql = `
       select *
         from "products"
-        where "productId" = 1;
+        where "productId" = $1;
     `;
-    const result = await db.query<Todo>(sql);
+    const result = await db.query<Todo>(sql, [productId]);
     const product = result.rows[0];
     if (!product) {
       throw new ClientError(404, `cannot find todo with todoId ${productId}`);
