@@ -1,9 +1,29 @@
-import { products, type Product } from './data';
+import { type Product } from './data';
 
-export function readCatalog(): Promise<Product[]> {
-  return Promise.resolve(products);
+export async function readCatalog(): Promise<Product[]> {
+  try {
+    const response = await fetch('/api/products');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = (await response.json()) as Product[];
+    return Promise.resolve(data);
+  } catch (err) {
+    return Promise.reject(err);
+  }
 }
 
-export function readProduct(productId: number): Promise<Product | undefined> {
-  return Promise.resolve(products.find((p) => p.productId === productId));
+export async function readProduct(
+  productId: number
+): Promise<Product | undefined> {
+  try {
+    const response = await fetch(`/api/products/${productId}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = (await response.json()) as Product;
+    return Promise.resolve(data);
+  } catch (err) {
+    return Promise.reject(err);
+  }
 }
