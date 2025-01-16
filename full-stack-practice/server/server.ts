@@ -3,12 +3,13 @@ import pg from 'pg';
 import express from 'express';
 import { ClientError, errorMiddleware } from './lib/index.js';
 
-type Todo = {
-  entryId: number;
-  task: string;
-  isCompleted: boolean;
-  createdAt: string;
-  updatedAt: string;
+type Product = {
+  productId: number;
+  name: string;
+  price: number;
+  imageUrl: string;
+  shortDescription: string;
+  longDescription: string;
 };
 
 const db = new pg.Pool({
@@ -28,7 +29,7 @@ app.get('/api/products', async (req, res, next) => {
         from "products"
         order by "productId";
     `;
-    const result = await db.query<Todo>(sql);
+    const result = await db.query<Product>(sql);
     res.json(result.rows);
   } catch (err) {
     next(err);
@@ -39,17 +40,20 @@ app.get('/api/products/:productId', async (req, res, next) => {
   try {
     const { productId } = req.params;
     if (!Number.isInteger(+productId) || +productId < 1) {
-      throw new ClientError(400, 'todoId must be a positive integer');
+      throw new ClientError(400, 'productId must be a positive integer');
     }
     const sql = `
       select *
         from "products"
         where "productId" = $1;
     `;
-    const result = await db.query<Todo>(sql, [productId]);
+    const result = await db.query<Product>(sql, [productId]);
     const product = result.rows[0];
     if (!product) {
-      throw new ClientError(404, `cannot find todo with todoId ${productId}`);
+      throw new ClientError(
+        404,
+        `cannot find product with productId ${productId}`
+      );
     }
     res.json(product);
   } catch (err) {
