@@ -1,4 +1,11 @@
-import { type Product } from './data';
+export type Product = {
+  productId: number;
+  name: string;
+  imageUrl: string;
+  price: number;
+  shortDescription: string;
+  longDescription: string;
+};
 
 export async function readCatalog(): Promise<Product[]> {
   const response = await fetch('/api/products');

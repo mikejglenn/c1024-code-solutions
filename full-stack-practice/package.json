@@ -1,5 +1,5 @@
 {
-  "name": "full-stack-intro",
+  "name": "full-stack-practice",
   "version": "1.0.0",
   "scripts": {
     "db:import": "sh database/import.sh",
