@@ -1,14 +1,19 @@
-import { Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Catalog } from './pages/Catalog';
-import { ProductDetails } from './pages/ProductDetails';
+import { Route, Routes } from 'react-router-dom';
 import { About } from './pages/About';
+import { Catalog } from './pages/Catalog';
 import { NotFound } from './pages/NotFound';
+import { ProductDetails } from './pages/ProductDetails';
+import { Header } from './components/Header';
 
-function App() {
+const menuItems = [
+  { name: 'About', iconUrl: '/hylian-emblem.svg', path: '/about' },
+  { name: 'Catalog', iconUrl: '/catalog.png', path: '/' },
+];
+
+export function App() {
   return (
     <Routes>
-      <Route path="/" element={<Header />}>
+      <Route path="/" element={<Header menuItems={menuItems} />}>
         <Route index element={<Catalog />} />
         <Route path="details/:productId" element={<ProductDetails />} />
         <Route path="about" element={<About />} />
@@ -17,5 +22,3 @@ function App() {
     </Routes>
   );
 }
-
-export default App;

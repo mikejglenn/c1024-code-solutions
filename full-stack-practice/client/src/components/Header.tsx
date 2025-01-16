@@ -1,20 +1,26 @@
 import { Link, Outlet } from 'react-router-dom';
 
-export function Header() {
+export type MenuItem = {
+  name: string;
+  iconUrl: string;
+  path: string;
+};
+
+type Props = {
+  menuItems: MenuItem[];
+};
+export function Header({ menuItems }: Props) {
   return (
     <div>
       <nav className="px-4 text-white bg-gray-900">
         <ul>
-          <li className="inline-block py-2 px-4">
-            <Link to="about" className="text-white">
-              About
-            </Link>
-          </li>
-          <li className="inline-block py-2 px-4">
-            <Link to="/" className="text-white">
-              Catalog
-            </Link>
-          </li>
+          {menuItems.map((menu) => (
+            <li key={menu.name} className="inline-block py-2 px-4">
+              <Link to={menu.path} className="text-white">
+                {menu.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <Outlet />
