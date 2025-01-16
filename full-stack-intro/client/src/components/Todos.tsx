@@ -40,8 +40,8 @@ export function Todos() {
     try {
       const response = await fetch('/api/todos/', {
         method: 'post',
-        body: JSON.stringify(newTodo),
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newTodo),
       });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -58,8 +58,8 @@ export function Todos() {
     try {
       const response = await fetch(`/api/todos/${todo.todoId}`, {
         method: 'put',
-        body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted }),
         headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted }),
       });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
