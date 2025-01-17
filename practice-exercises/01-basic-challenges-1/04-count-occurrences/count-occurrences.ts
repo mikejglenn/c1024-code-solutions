@@ -1,3 +1,7 @@
 export function countOccurrences(str: string, char: string): number {
-  return NaN;
+  let n = 0;
+  for (const c of str) {
+    if (c === char) n++;
+  }
+  return n;
 }

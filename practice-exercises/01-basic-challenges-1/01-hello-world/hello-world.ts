@@ -1,3 +1,3 @@
 export function helloWorld(): string {
-  return '';
+  return 'Hello World!';
 }
