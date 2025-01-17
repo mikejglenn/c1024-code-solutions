@@ -35,7 +35,7 @@ app.post('/api/auth/sign-up', async (req, res, next) => {
     if (!username || !password) {
       throw new ClientError(400, 'username and password are required fields');
     }
-    // throw new Error('Not implemented');
+
     const hashedPassword = await argon2.hash(password);
     const sql = `
       insert into "users" ("username", "hashedPassword")
@@ -44,15 +44,6 @@ app.post('/api/auth/sign-up', async (req, res, next) => {
     `;
     const result = await db.query<User>(sql, [username, hashedPassword]);
     res.status(201).json(result.rows[0]);
-    /* TODO:
-     * Delete the "Not implemented" error.
-     * Hash the user's password with `argon2.hash()` (note that this method is async)
-     * Insert the user's "username" and "hashedPassword" into the "users" table.
-     * Respond to the client with a 201 status code and the new user's "userId", "username", and "createdAt" timestamp.
-     * Catch any errors.
-     *
-     * Hint: Insert statements can include a `returning` clause to retrieve the inserted row(s).
-     */
   } catch (err) {
     next(err);
   }
@@ -64,39 +55,27 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
     if (!username || !password) {
       throw new ClientError(401, 'invalid login');
     }
-    // throw new Error('Not implemented');
+
     const sql = `
       select *
         from "users"
-        where "userId" = $1;
+        where "username" = $1;
     `;
     const result = await db.query<User>(sql, [username]);
     const user = result.rows[0];
     if (!user) throw new ClientError(401, 'invalid login');
-    const hashedPassword = await argon2.hash(password);
-    // if (hashedPassword === argon2.verify(password))
-    /* TODO:
-     * Delete the "Not implemented" error.
-     * Query the database to find the "userId" and "hashedPassword" for the "username".
-     * If no user is found,
-     *   throw a 401: 'invalid login' error.
-     * If a user is found,
-     *   confirm that the password included in the request body matches the "hashedPassword" with `argon2.verify()`
-     *   If the password does not match,
-     *     throw a 401: 'invalid login' error.
-     *   If the password does match,
-     *     Create a payload object containing the user's "userId" and "username".
-     *     Create a new signed token with `jwt.sign()`, using the payload and your TOKEN_SECRET
-     *       (see `hashKey` above).
-     *     Send the client a 200 response containing an object with 2 keys, "user" and "token",
-     *       where "user"'s value is the payload and "token"'s value is the token.
-     */
+    if (!(await argon2.verify(user.hashedPassword, password)))
+      throw new ClientError(401, 'invalid login');
+
+    const payload = { userId: user.userId, username };
+    const token = jwt.sign(payload, hashKey);
+    res.json({ user: payload, token });
   } catch (err) {
     next(err);
   }
 });
 
-app.get('/api/todos', async (req, res, next) => {
+app.get('/api/todos', authMiddleware, async (req, res, next) => {
   try {
     const sql = `
       select *
@@ -111,7 +90,7 @@ app.get('/api/todos', async (req, res, next) => {
   }
 });
 
-app.post('/api/todos', async (req, res, next) => {
+app.post('/api/todos', authMiddleware, async (req, res, next) => {
   try {
     const { task, isCompleted = false } = req.body;
     if (!task || typeof isCompleted !== 'boolean') {
@@ -131,7 +110,7 @@ app.post('/api/todos', async (req, res, next) => {
   }
 });
 
-app.put('/api/todos/:todoId', async (req, res, next) => {
+app.put('/api/todos/:todoId', authMiddleware, async (req, res, next) => {
   try {
     const todoId = Number(req.params.todoId);
     if (!Number.isInteger(todoId) || todoId < 1) {
