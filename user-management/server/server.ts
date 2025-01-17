@@ -40,7 +40,7 @@ app.post('/api/auth/sign-up', async (req, res, next) => {
     const sql = `
       insert into "users" ("username", "hashedPassword")
       values ($1, $2)
-      returning *;
+      returning "userId", "username", "createdAt";
     `;
     const result = await db.query<User>(sql, [username, hashedPassword]);
     res.status(201).json(result.rows[0]);
@@ -57,17 +57,18 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
     }
 
     const sql = `
-      select *
+      select "userId", "hashedPassword"
         from "users"
-        where "username" = $1;
+       where "username" = $1;
     `;
     const result = await db.query<User>(sql, [username]);
     const user = result.rows[0];
     if (!user) throw new ClientError(401, 'invalid login');
-    if (!(await argon2.verify(user.hashedPassword, password)))
+    const { userId, hashedPassword } = user;
+    if (!(await argon2.verify(hashedPassword, password)))
       throw new ClientError(401, 'invalid login');
 
-    const payload = { userId: user.userId, username };
+    const payload = { userId, username };
     const token = jwt.sign(payload, hashKey);
     res.json({ user: payload, token });
   } catch (err) {

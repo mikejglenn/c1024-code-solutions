@@ -26,6 +26,11 @@ export function UserProvider({ children }: Props) {
   const [user, setUser] = useState<User>();
   const [token, setToken] = useState<string>();
 
+  useEffect(() => {
+    setUser(readUser());
+    setToken(readToken());
+  }, []);
+
   function handleSignIn(user: User, token: string) {
     setUser(user);
     setToken(token);
@@ -39,11 +44,6 @@ export function UserProvider({ children }: Props) {
   }
 
   const contextValue = { user, token, handleSignIn, handleSignOut };
-
-  useEffect(() => {
-    setUser(readUser());
-    setToken(readToken());
-  }, []);
 
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
