@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22330c3-2729-4a91-a4c5-9eb7941e015d" name="Changes" comment="Completed java-get-started exercise.">
-      <change afterPath="$PROJECT_DIR$/java-data-types/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/folders.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/java-data-types-quiz-notes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/src/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-data-types/src/main/java/lfz/dtypes/DTypes.java" afterDir="false" />
+    <list default="true" id="c22330c3-2729-4a91-a4c5-9eb7941e015d" name="Changes" comment="got modules to work">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c1024-code-solutions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-data-types/src/main/java/lfz/dtypes/DTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-intro/src/Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Intro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="java-data-types" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,13 +62,14 @@
   "keyToString": {
     "Application.DTypes.executor": "Run",
     "Application.Intro.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "java-data-types",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mjgle/OneDrive/Documents/learningfuze/repos/c1024-code-solutions",
+    "last_opened_file_path": "C:/Users/mjgle/OneDrive/Documents/learningfuze/repos/c1024-code-solutions/java-data-types/.idea/modules.xml",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -118,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739398607809</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed java-get-started exercise.">
+      <option name="closed" value="true" />
+      <created>1739491247830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739491247830</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Completed java-data-types exercise.">
+      <option name="closed" value="true" />
+      <created>1739491258623</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739491258623</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed java-get-started exercise." />
     <MESSAGE value="Completed java-intro exercise." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed java-intro exercise." />
+    <MESSAGE value="got modules to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="got modules to work" />
   </component>
 </project>
