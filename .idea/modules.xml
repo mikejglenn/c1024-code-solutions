@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/c1024-code-solutions.iml" filepath="$PROJECT_DIR$/c1024-code-solutions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-data-types/DataTypes/DataTypes.iml" filepath="$PROJECT_DIR$/java-data-types/DataTypes/DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-intro/Intro/Intro.iml" filepath="$PROJECT_DIR$/java-intro/Intro/Intro.iml" />
     </modules>
   </component>
 </project>

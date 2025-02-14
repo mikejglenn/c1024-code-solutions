@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c22330c3-2729-4a91-a4c5-9eb7941e015d" name="Changes" comment="got modules to work">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c1024-code-solutions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/DataTypes/DataTypes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/DataTypes/src/DataTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-intro/Intro/Intro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-intro/Intro/src/Intro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-data-types/src/main/java/lfz/dtypes/DTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-intro/src/Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Intro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-data-types/src/main/java/lfz/dtypes/DTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-intro/src/Intro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/c1024-code-solutions/DTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/c1024-code-solutions/Intro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/c1024-code-solutions/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Intro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +58,9 @@
     &quot;repository&quot;: &quot;c1024-code-solutions&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -61,6 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DTypes.executor": "Run",
+    "Application.DataTypes.executor": "Run",
     "Application.Intro.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -69,8 +81,8 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mjgle/OneDrive/Documents/learningfuze/repos/c1024-code-solutions/java-data-types/.idea/modules.xml",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "C:/Users/mjgle/OneDrive/Documents/learningfuze/repos/c1024-code-solutions/java-data-types",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.editor"
@@ -83,20 +95,21 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mjgle\OneDrive\Documents\learningfuze\repos\c1024-code-solutions" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="DTypes" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DTypes" />
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="c1024-code-solutions" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Intro" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.2" />
-      <option name="MAIN_CLASS_NAME" value="Intro" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="c1024-code-solutions" />
+      <option name="filePath" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -132,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739491258623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="got modules to work">
+      <option name="closed" value="true" />
+      <created>1739492104662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739492104662</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
