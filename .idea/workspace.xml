@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c22330c3-2729-4a91-a4c5-9eb7941e015d" name="Changes" comment="Completed java-get-started exercise.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/c1024-code-solutions.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/folders.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/java-data-types-quiz-notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/src/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-data-types/src/main/java/lfz/dtypes/DTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,28 +63,38 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DTypes.executor": "Run",
     "Application.Intro.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "java-intro",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "java-data-types",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mjgle/Downloads/java-intro",
+    "last_opened_file_path": "C:/Users/mjgle/OneDrive/Documents/learningfuze/repos/c1024-code-solutions",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build"
+    "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mjgle\OneDrive\Documents\learningfuze\repos\c1024-code-solutions" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mjgle\OneDrive\Documents\learningfuze\repos\c1024-code-solutions" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="DTypes" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DTypes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Intro" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-23.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Intro" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed java-get-started exercise." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed java-get-started exercise." />
+    <MESSAGE value="Completed java-intro exercise." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed java-intro exercise." />
   </component>
 </project>
