@@ -2,11 +2,11 @@ public class RichestCustomerWealth {
   public static int maximumWealth(int[][] accounts) {
     int maxWealth = 0;
 
-    for (int[] account : accounts) {
+    for (int[] customer : accounts) {
       int currentWealth = 0;
 
-      for (int i : account) {
-        currentWealth += i;
+      for (int account : customer) {
+        currentWealth += account;
       }
 
       maxWealth = Math.max(maxWealth, currentWealth);
